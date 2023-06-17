@@ -1,5 +1,12 @@
+import logging
 from pruebaFesteban import poke_request
 
+logging.basicConfig(level=logging.INFO)
+
+
 if __name__ == "__main__":
-    pokemon_data = poke_request(1)
+    idx = 1
+    logging.info(
+        f"Executing the request to the pokemon api with the id #{idx}")
+    pokemon_data = poke_request(idx)
     print(pokemon_data["name"])
