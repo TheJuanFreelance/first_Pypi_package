@@ -9,4 +9,5 @@ if __name__ == "__main__":
     logging.info(
         f"Executing the request to the pokemon api with the id #{idx}")
     pokemon_data = poke_request(idx)
+    logging.info(pokemon_data.__doc__)
     print(pokemon_data["name"])
